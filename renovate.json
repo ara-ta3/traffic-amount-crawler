@@ -1,24 +1,36 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:best-practices"],
+  "extends": [
+    "config:best-practices"
+  ],
   "packageRules": [
     {
       "automerge": true,
       "automergeType": "pr",
-      "matchDatasources": ["github-releases", "github-tags"],
-      "matchPackagePatterns": ["^actions\\/"],
-      "groupName": "github actions"
+      "matchDatasources": [
+        "github-releases",
+        "github-tags"
+      ],
+      "groupName": "github actions",
+      "matchPackageNames": [
+        "/^actions\\//"
+      ]
     },
     {
       "automerge": true,
       "automergeType": "pr",
-      "matchManagers": ["gomod"],
-      "matchPackagePatterns": ["*"],
-      "schedule": ["at any time"],
-      "groupName": "all go modules"
+      "matchManagers": [
+        "gomod"
+      ],
+      "schedule": [
+        "at any time"
+      ],
+      "groupName": "all go modules",
+      "matchPackageNames": [
+        "*"
+      ]
     }
   ],
-  "transitiveRemediation": true,
   "vulnerabilityAlerts": {
     "enabled": true,
     "rangeStrategy": "auto"
