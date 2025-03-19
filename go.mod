@@ -2,13 +2,13 @@ module traffic-costs-crawler
 
 go 1.23.0
 
-toolchain go1.23.3
+toolchain go1.24.1
 
 require (
-	github.com/golang-module/carbon/v2 v2.4.1
-	github.com/playwright-community/playwright-go v0.4802.0
-	github.com/slack-go/slack v0.15.0
-	github.com/spf13/viper v1.19.0
+	github.com/golang-module/carbon/v2 v2.5.4
+	github.com/playwright-community/playwright-go v0.5001.0
+	github.com/slack-go/slack v0.16.0
+	github.com/spf13/viper v1.20.0
 )
 
 require (
