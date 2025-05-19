@@ -8,6 +8,8 @@ github.com/deckarep/golang-set/v2 v2.7.0 h1:gIloKvD7yH2oip4VLhsv3JyLLFnC0Y2mlusg
 github.com/deckarep/golang-set/v2 v2.7.0/go.mod h1:VAky9rY/yGXJOLEDv3OMci+7wtDpOF4IN+y82NBOac4=
 github.com/dromara/carbon/v2 v2.5.9 h1:uDxA5piG4D87RFRjnm+rQXb+X9XGXnh1j4ajccvvoLo=
 github.com/dromara/carbon/v2 v2.5.9/go.mod h1:Baj3A1uBBctJmpZWJd6/+WWnmIuY2pobR6IOpB6xigc=
+github.com/dromara/carbon/v2 v2.6.6 h1:WWtCv23+5faQEtS6A4/Ci10YGefNDLo/WU4ciKBV5FY=
+github.com/dromara/carbon/v2 v2.6.6/go.mod h1:7GXqCUplwN1s1b4whGk2zX4+g4CMCoDIZzmjlyt0vLY=
 github.com/frankban/quicktest v1.14.6 h1:7Xjx+VpznH+oBnejlPUj8oUpdxnVs4f8XU8WnHkI4W8=
 github.com/frankban/quicktest v1.14.6/go.mod h1:4ptaffx2x8+WTWXmUCuVU6aPUX1/Mz7zb5vbUoiM6w0=
 github.com/fsnotify/fsnotify v1.7.0 h1:8JEhPFa5W2WU7YfeZzPNqzMP6Lwt7L2715Ggo0nosvA=
@@ -32,6 +34,8 @@ github.com/golang-module/carbon/v2 v2.4.1 h1:cYUD8T+rHeX+qIybGYpnJ8I90F10dvyEF67
 github.com/golang-module/carbon/v2 v2.4.1/go.mod h1:1jP9AZ4k2+lmfgY/wZgmtsN52VcHC5YuPM6varKDTkM=
 github.com/golang-module/carbon/v2 v2.5.9 h1:QKotfr6/Fkk5RGIPyEfItaR5guF37QH2YyKCbn1EFxM=
 github.com/golang-module/carbon/v2 v2.5.9/go.mod h1:yAYXIP0OIq7ykDosUWpZpEyTGuvBXnSjGMQ/EaNagYQ=
+github.com/golang-module/carbon/v2 v2.6.6 h1:49SFiCZuiOdhEP9KrjPXgwYpP1DtyFLzhaUhFyEehco=
+github.com/golang-module/carbon/v2 v2.6.6/go.mod h1:Dl8DUOZO1AFzDF5c+PqIhoN2LLRPZRJg9CipspKP7S0=
 github.com/google/go-cmp v0.5.7/go.mod h1:n+brtR0CgQNWTVd5ZUFpTBC8YFBDLK/h/bpaJ8/DtOE=
 github.com/google/go-cmp v0.5.9 h1:O2Tfq5qg4qc4AmwVlvv0oLiVAGB7enBSJ2x2DqQFi38=
 github.com/google/go-cmp v0.5.9/go.mod h1:17dUlkBOakJ0+DkrSSNjCkIjxS6bF9zb3elmeNGIjoY=
