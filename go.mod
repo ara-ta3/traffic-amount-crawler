@@ -5,20 +5,20 @@ go 1.23.0
 toolchain go1.24.3
 
 require (
-	github.com/golang-module/carbon/v2 v2.5.9
+	github.com/golang-module/carbon/v2 v2.6.7
 	github.com/playwright-community/playwright-go v0.5200.0
-	github.com/slack-go/slack v0.16.0
+	github.com/slack-go/slack v0.17.0
 	github.com/spf13/viper v1.20.1
 )
 
 require (
 	github.com/deckarep/golang-set/v2 v2.7.0 // indirect
-	github.com/dromara/carbon/v2 v2.5.9 // indirect
+	github.com/dromara/carbon/v2 v2.6.7 // indirect
 	github.com/fsnotify/fsnotify v1.8.0 // indirect
 	github.com/go-jose/go-jose/v3 v3.0.4 // indirect
 	github.com/go-stack/stack v1.8.1 // indirect
 	github.com/go-viper/mapstructure/v2 v2.2.1 // indirect
-	github.com/gorilla/websocket v1.5.1 // indirect
+	github.com/gorilla/websocket v1.5.3 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
 	github.com/magiconair/properties v1.8.7 // indirect
 	github.com/mitchellh/mapstructure v1.5.0 // indirect
