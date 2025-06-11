@@ -19,20 +19,24 @@ func NewSlackAPI(token, slackChannelID string) SlackAPI {
 }
 
 func (s SlackAPI) Send(a Amount) error {
-	t := fmt.Sprintf("日本通信SIMの利用データ量: %dMB", a.CurrentAmount)
+	header := slack.NewHeaderBlock(&slack.TextBlockObject{Type: "plain_text", Text: "日本通信SIM利用状況"})
+
+	mainText := slack.NewTextBlockObject("mrkdwn", fmt.Sprintf("*現在の利用量*: %dMB", a.CurrentAmount), false, false)
+
+	fields := []*slack.TextBlockObject{
+		slack.NewTextBlockObject("mrkdwn", fmt.Sprintf("*平均使用量*: %.1fMB(%d日)", a.AverageUsedAmount(), a.UsedDays()), false, false),
+		slack.NewTextBlockObject("mrkdwn", fmt.Sprintf("*残り利用可能日数*: %.0f日~%s", a.ExpectedRestDays(), a.ExpectedEndDate().ToDateString()), false, false),
+		slack.NewTextBlockObject("mrkdwn", fmt.Sprintf("*使用可能量*: %dMB(平均 %.1fMB)", a.RestAmount(), a.AverageRestAmount()), false, false),
+		slack.NewTextBlockObject("mrkdwn", fmt.Sprintf("*更新まで*: %d日~%s", a.RestDays(), a.Period.End.ToDateString()), false, false),
+	}
+
 	_, _, err := s.api.PostMessage(
 		s.slackChannelID,
 		slack.MsgOptionBlocks(
-			slack.NewSectionBlock(
-				&slack.TextBlockObject{Type: "plain_text", Text: t},
-				[]*slack.TextBlockObject{
-					{Type: "plain_text", Text: fmt.Sprintf("平均使用量 %.1fMB(%d日)", a.AverageUsedAmount(), a.UsedDays())},
-					{Type: "plain_text", Text: fmt.Sprintf("%.0f日~%s 使える計算", a.ExpectedRestDays(), a.ExpectedEndDate().ToDateString())},
-					{Type: "plain_text", Text: fmt.Sprintf("使用可能量 %dMB(平均 %.1fMB)", a.RestAmount(), a.AverageRestAmount())},
-					{Type: "plain_text", Text: fmt.Sprintf("更新まで %d日~%s", a.RestDays(), a.Period.End.ToDateString())},
-				},
-				nil,
-			),
+			header,
+			slack.NewSectionBlock(mainText, nil, nil),
+			slack.NewDividerBlock(),
+			slack.NewSectionBlock(nil, fields, nil),
 		),
 	)
 	return err
